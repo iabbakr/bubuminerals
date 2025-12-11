@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubu Minerals International Ltd. - Africa's Source for World-Class Minerals</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. CORE BRAND STYLES & VARIABLES --- */
+        :root {
+            --color-primary: #072A4F; /* Deep Navy Blue */
+            --color-secondary: #D4AF37; /* Gold Metallic */
+            --color-accent-grey: #2E2E2E; /* Graphite Grey */
+            --color-light: #f4f4f4;
+            --color-white: #ffffff;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        /* --- 2. GLOBAL RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--color-accent-grey);
+            background-color: var(--color-white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--color-primary);
+        }
+
+        /* --- 3. HEADER & NAVIGATION --- */
+        header {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--color-white);
+        }
+        .logo-text span {
+            color: var(--color-secondary);
+        }
+        
+        .nav-links a {
+            color: var(--color-white);
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* --- 4. HERO SECTION (BANNER) --- */
+        #hero {
+            background: linear-gradient(rgba(7, 42, 79, 0.85), rgba(7, 42, 79, 0.85)), url('placeholder-mining-texture.jpg') center center no-repeat;
+            background-size: cover;
+            color: var(--color-white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        #hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--color-white);
+            text-transform: uppercase;
+        }
+        
+        #hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+            color: var(--color-light);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c09f2d; /* Slightly darker gold */
+        }
+
+        /* --- 5. VALUES SECTION --- */
+        #values {
+            background-color: var(--color-light);
+            text-align: center;
+        }
+
+        #values h2 {
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .value-item {
+            padding: 20px;
+            background-color: var(--color-white);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-item h3 {
+            color: var(--color-secondary);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* --- 6. MINERALS SECTION --- */
+        #minerals {
+            background-color: var(--color-white);
+        }
+
+        #minerals h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .mineral-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .mineral-list li {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mineral-list li:nth-child(even) {
+            background-color: var(--color-accent-grey);
+        }
+
+
+        /* --- 7. CONTACT FORM SECTION --- */
+        #contact {
+            background-color: var(--color-light);
+        }
+
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-content {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .contact-info {
+            flex: 1;
+            padding: 20px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 8px;
+        }
+        
+        .contact-info h3 {
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .contact-form {
+            flex: 2;
+        }
+
+        .contact-form form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: var(--font-body);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .submit-button {
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        /* --- 8. FOOTER --- */
+        footer {
+            background-color: var(--color-accent-grey);
+            color: var(--color-light);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* --- 9. MEDIA QUERIES (RESPONSIVENESS) --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide links on small screen for simplicity */
+            }
+            #hero h1 {
+                font-size: 36px;
+            }
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-content {
+                flex-direction: column;
+            }
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-text">BUBU <span>MINERALS</span></div>
+                <div class="nav-links">
+                    <a href="#company">Company</a>
+                    <a href="#minerals">Minerals</a>
+                    <a href="#values">Compliance</a>
+                    <a href="#contact" class="cta-button">Contact Sales</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>BUBU MINERALS INTERNATIONAL LTD.</h1>
+        <p>Africa's Source for World-Class Minerals. Sourcing Excellence. Delivering Value.</p>
+        <a href="#contact" class="cta-button">Request a Full Corporate Offer (FCO)</a>
+    </section>
+    
+    <section id="company" class="container">
+        <h2>Global Sourcing, Verified Supply.</h2>
+        <p style="max-width: 900px; margin-bottom: 30px;">
+            Bubu Minerals International Ltd. is your trusted global partner for high-quality solid minerals. We specialize in end-to-end supply chain management, from ethical sourcing in certified mining communities to transparent, fully compliant export worldwide. Our commitment to SGS/Intertek verification and robust logistics ensures reliability for every international buyer.
+        </p>
+        
+        <div style="display: flex; gap: 30px; font-weight: 500; font-size: 18px;">
+            <p style="color: var(--color-primary);">✅ Direct Source (No Middlemen)</p>
+            <p style="color: var(--color-primary);">✅ Full Export Compliance</p>
+            <p style="color: var(--color-primary);">✅ Worldwide Logistics</p>
+        </div>
+    </section>
+
+    <section id="values">
+        <div class="container">
+            <h2>Our Global Standard Values</h2>
+            <div class="value-grid">
+                <div class="value-item">
+                    <h3>Integrity</h3>
+                    <p>100% transparent operations and contractual adherence.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Quality</h3>
+                    <p>Strict SGS & Intertek mineral testing and verification.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Compliance</h3>
+                    <p>Fully licensed and legally compliant exports via approved channels.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Reliability</h3>
+                    <p>Consistent supply and guaranteed on-time worldwide delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="minerals" class="container">
+        <h2>Our Core Mineral Portfolio</h2>
+        <ul class="mineral-list">
+            <li>Lithium Ore</li>
+            <li>Lead Ore (Pb)</li>
+            <li>Zinc Ore</li>
+            <li>Copper Ore</li>
+            <li>Manganese Ore</li>
+            <li>Tin Ore (Cassiterite)</li>
+            <li>Kaolin</li>
+            <li>Gold (Au) - Licensed Export</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Partner with Bubu Minerals Today</h2>
+            <div class="form-content">
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Bubu Minerals International Ltd.</strong></p>
+                    <p>Email: bubumineralsinternationalltd@gmail.com</p>
+                    <p>Phone: +234 707 260 0715</p>
+                    <p>Address: Abuja, Nigeria</p>
+                    <p style="margin-top: 20px; font-weight: 600;">We respond to all serious buyer inquiries within 24 hours.</p>
+                </div>
+                
+                <div class="contact-form">
+                    <p style="margin-bottom: 15px;">To accelerate your inquiry, please clearly state the commodity, required tonnage, and target Incoterm.</p>
+                    <form action="[Your Form Submission Script URL]" method="POST">
+                        <input type="text" name="name" placeholder="Your Name / Company Contact" required>
+                        <input type="email" name="email" placeholder="Business Email\" required>
+                        <input type="text" name="company" placeholder="Company Name" required>
+                        <input type="text" name="commodity" placeholder="Required Commodity (e.g., Lithium Ore)" required>
+                        <textarea name="message" rows="5" placeholder="Quantity (MT), Incoterm (CIF/FOB), and full inquiry details..." required></textarea>
+                        <button type="submit" class="cta-button submit-button">Submit Inquiry & Receive LOI</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Bubu Minerals International Ltd. | Mining Standards. Worldwide Supply. | All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
